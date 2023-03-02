@@ -1,1 +1,3 @@
 # Networks
+
+This is a repository of the of my Networking class assignments written in C. It has SMTP, HTTP, DNS and a client-server setup. In the client server setup I have examples of me learning Go-Back-N and Stop-And-Wait. I learned the difference between TCP and UDP(RUDP). From what I have been told numerous times, coding this in C is much more tedious than in Python and ultimately would have resolved my bug in my Go-Back-N. The bug entails a binary character being added to the end of the write buffer for creating a file on the server from a client during a network connection that is not 100% up.
