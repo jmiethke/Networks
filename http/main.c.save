@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <string.h>
+
+void send_http(char* host, char* msg, char* resp, size_t len);
+
+
+/*
+  Implement a program that takes a host, verb, and path and
+  prints the contents of the response from the request
+  represented by that request.
+ */
+int main(int argc, char* argv[]) {
+  if (argc != 4) {
+    printf("Invalid arguments - %s <host> <GET|POST> <path>\n", argv[0]);
+    return -1;
+  }
+  char* host = argv[1];
+  char* verb = argv[2];
+  char* path = argv[3];
+
+  /*
+    STUDENT CODE HERE
+   */
+   char message[] = " HTTP/1.0\r\n";
+   strcat(verb, " ");
+   strcat(verb, path);
+!LAvBZjUnq4FnDMlFOKyEPtN2EDgGq6XvWKd50276ebcBzBDXirTKHq(G)T3DLSXMCxtAN(fBlPDxT7ZZ(IPE0akrq9961TxVEuYwkjIs0us3oEd60hxbcCCrCSMBO(xbBW1mtroZWPBOKKm1Hzcjxt9)EkHjdtv53KZ2YdoUJtjKXlNmXhpqSLzekjATTmH9TXkYUCoA6tV3OkKHW(r4DaASYjMMhQKrAkiH2WYnngqQKVO4XcPqN(VwEqJh48Dd174HMLOmyCwiay5U3m9xVEWW5F6UpqjHkvwK6GCsuIfjESfgHOsn68Xw7R5B3ZZPeVox1bxwSzjpbCcn4D(wQWWF0SsNYal)hTu0U9EHwSjJthvTowjbN9MCXtLR)qblcciw56GGwhtepXbl3LsYvgGYcGdOe)f(tQVkEw8TkbAOH3fSOMc)I72yv8B01c8XNlGZNhRYu5UGboXVR9zp7Z(4MMkPDgP6IN67pz5QrlccwmF50F5DTdaxA0I7cMnTXNTx1zEGJdl24CtRuFUqBeXhPKXt8dMSSA3WwoON1b9SoO3jh0MbGe3ivEeqwv0yBejLlssHp)U(yAGmwKawe06GiYK62gvz8RExemR6t8CG2gXmMmE5AsQQWuUEjFRqIxpbsy0yHdOWPCoKgVwOzq2qe6GamYZLSSFRw2UvUqqQi8bO6uBvVipdCEJzN(hU8YdSevhH6Y5M58(KntE)LGepPuBTH4zeuncIwKeYY4wRXkmGil2zQsGbbZTzZootaiJvifMW2kpR2AXyBcIbZADENM3GAqqXcRTmeFcJ7gQR9BxxBzmS8vyoRwkmLh(a(HAhL8ZVfYaYfjjaMcKazplxG4h04rDWIZSScyL3vwRLYKj8gtTlxTJNBowvAxj8OQ0LQegxCVPWyuYfaTLXo2qzqYXoxPRkSHs96Dvxm8WDSDrYumBhxS7JTxzrMruhJacTkmJbS5i3cqQSShKG5XDChHklKjyK97dxUC6ILpZkASNWZnDllbE1Gb2Stw2Uuh3uHCnasHSgmTCrZcihaMH0ftHGoSsGIRuICwgoQueFtrCSd1E3Kz3EZDZqdlWHba2HKcm0ayrnOYHfq2K2(EUqJrOTGNVNln3MZJfpctBUDYSzvXY0Ot5KBxaChZazvKF6TwGZhCleXSAdxoNLbfUvTrq)UBJXjGpIgF14HKGvKGHlHGSoUmoFACMchbUXILqH(lcqNhHFDqqZHgaOh(QG4xeEw83BW)JGRfa91ry7fJLN75bU4AUkcAk8TE2U9Vy0BR2wPo5YyD55isv9iylBoUDP15XKEzvuz7RqAodXM6r6GUTuTfpFRZY4r2RC0Rae)d5xvtBG5PfUFyaAN)FGXFwm02BWVfYq12nmtl)ECtVTZV8x29pdpEbMmsO)m8pxiDcnrGXMWmGQ3v07mvIie64ALsjFtvSDr57lxxUoNd)pOSCD92)P39LRv5LRRx39(lkxZKrTeP3ZeP)9x8JLVNlJQBMEto)Vk4YWJW4OoDhunpb7Y96tvT)ukxMGdJD9Z3dF0Vlad4uVPxtjNM6bNs)7
+   strcat(verb, message); 
+   char response[4096];
+   send_http(host, verb, response, 4096);
+   printf("%s\n", response);  
+/*
+strcat(host, verb);
+strcat(host, path);
+char response[1024];
+send_http("www.google.com", "GET / HTTP/1.0\r\n\r\n", response, 1024);
+printf("%s\n", response);
+*/
+  return 0;
+}
